@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #E6EFF5;
+}
+.content {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "top-card top-card""subscription sign";
+}
+.top-card {
+  grid-area: top-card;
+  background: #FFFFFF;
+  padding: 40px;
+  border-radius: 8px 8px 0 0;
+}
+.top-card h1 {
+  margin-top: 40px;
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: #2AB3B1;
+  font-weight: bold;
+}
+.top-card h2 {
+  color: #C0DF33;
+  margin-bottom: 11px;
+  font-weight: bold;
+}
+.top-card p {
+  color: #9AA7BE;
+  font-size: 16px;
+}
+.subscription {
+  grid-area: subscription;
+  background: #2ab3b0;
+  padding: 40px;
+  border-radius: 0 0 0 8px ;
+  color: #fff;
+}
+.subscription h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+.price {
+  margin-bottom: 9px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.price strong {
+  font-size: 32px;
+}
+.price span {
+  font-size: 16px;
+  font-weight: 100;
+  opacity: 0.5;
+}
+.subscription p {
+  margin-bottom: 26px;
+}
+.sign-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #C0DF33;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  height: 48px;
+  cursor: pointer;
+}
+.sign {
+  grid-area: sign;
+  background: #4bbfbc;
+  padding: 40px;
+  border-radius: 0 0 8px 0  ;
+  color: #fff;
+}
+.sign h1 {
+  margin-bottom: 18px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.sign p {
+  font-size: 14px;
+  opacity: 0.8;
+  font-weight: 200;
+}
+@media screen and (max-width: 620px) {
+  body {
+    background: #E6EFF5;
+  }
+  .app {
+    display: block;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "top-card""subscription" "sign";
+    padding: 32px;
+  }
+  .top-card{
+    grid-area: top-card;
+  }
+  .subscription{
+    grid-area: subscription;
+    border-radius: 0;
+  }
+  .sign{
+    grid-area: sign;
+    border-radius: 0;
+  }
+
+}
